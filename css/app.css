@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'Helvetica';
   src: url('../utils/Helvetica/Helvetica-Normal.otf');
@@ -56,7 +55,7 @@
 }
 .icon-bell-icon{
   float: right;
-  padding-top: 15px;
+  padding-top: 12px;
 }
 .hyt-photo{
   height: 100%;
@@ -69,14 +68,16 @@
 .hyt-line-list{
   position: absolute;
   bottom: 20px;
-  margin-left: 30px;
+  margin-left: 10px;
+}
+.hyt-container-all-unread span:nth-child(2){
+  color: #fff;
 }
 .hyt-container-all-unread{
-  float: left;
   display: inline-block;
 }
-.hyt-container-all-unread span{
-  padding-left:5px;
+.icon-list-icon{
+  padding-right:10px; 
 }
 .hyt-container-all-threads{
   display: inline-block;
@@ -90,6 +91,10 @@
   left: 50%;
   transform: translate(-50%,-50%);
   font-family: Arial !important;
+}
+.hyt-container-titles h6{
+  margin-top: 5px;
+  font-size: 11px;
 }
 .profile-container h4{
   color: #fff;
@@ -109,34 +114,36 @@
   height: 30px;
   line-height: 30px;
   position: relative;
+  font-size: 14px;
+  font-weight: 540; 
 }
 .hyt-firts-list::before{
-  content: '----------';
-  font-size: 3px;
+  content: '------------';
+  font-size: 2px;
   background-color: #05b44f;
   color: #05b44f;
   border-radius: 50%;
   margin-left: -10px;
   position: absolute; 
   line-height: 10px;
-  height: 10px;
-  top: 30%;
+  height: 8px;
+  top: 35%;
   left: 25px;
 }
 #hyt-firts-list-1,#hyt-firts-list-2,#hyt-firts-list-3{
   position: relative;
 }
 #hyt-firts-list-1::before, #hyt-firts-list-3::before{
-  content: '----------';
-  font-size: 3px;
+  content: '------------';
+  font-size: 2px;
   background-color: #05b44f;
   color: #05b44f;
   border-radius: 50%;
   margin-left: -10px;
   position: absolute; 
   line-height: 10px;
-  height: 10px;
-  top: 30%;
+  height: 8px;
+  top: 35%;
   left: 25px;
 }
 #hyt-firts-list-2::before {
@@ -166,6 +173,7 @@
   margin-right: 15px;
   margin-top: 4px;
   text-align: center;
+  font-size: 14px;
 }
 .hyt-container-groups span{
   float: right;
@@ -181,6 +189,7 @@
   margin-right: 15px;
   margin-top: 4px;
   text-align: right;
+  font-size: 14px;
 }
 .hyt-container-messages span{
   float: right;
@@ -197,6 +206,7 @@
 .hyt-container-messages  li{
   height: 30px;
   line-height: 30px;
+  font-size: 14px;
 }
 .hyt-container-messages li:hover{
   background-color: #505050;
@@ -236,8 +246,8 @@
 .icon-baloon-icon{
   float: right; 
   border-radius: 50%;
-  height:45px;
-  width: 45px;
+  height:43px;
+  width: 43px;
   background-color: #fff;
   box-shadow: 0px 0px 4px #bbbbbb;
   color: rgba(255, 255, 255, 0);
@@ -290,9 +300,6 @@
   .hyt-container-central{
       height: 400px; 
   }
-  .hyt-container-input-search input{
-
-  }
 }
 .hyt-container-central h3{
   font-weight: 100;
@@ -313,8 +320,6 @@
 .hyt-message-input {
   width: 95%;
   display: flex;
-  position: absolute;
-  left: 5%;
   bottom: 0;
 }
 .icon-upload-icon {
@@ -323,8 +328,9 @@
   border-bottom: 1px solid #666666; 
   border-left: 1px solid #666666;
   padding: 10px; 
-  padding-bottom: 9px;
+  padding-bottom: 0;
   color: #b4b4b4;
+  height: 27px;
 }
 .icon-upload-icon:hover{
   background-color: #00a58b;
@@ -336,9 +342,10 @@
   border-right: 1px solid #666666;
   padding-top: 7px;
   padding-left: 10px;
-  padding-bottom: 12px;
+  padding-bottom: 1px;
   padding-right: 10px;
   color: #b4b4b4;
+  height: 29px;
 }
 .hyt-container-perfil{
   height: 55px;
@@ -358,7 +365,7 @@
   background-size: 46px; 
 }
 .hyt-container-image{
-  height: 300px;
+  height: 200px;
   width: 700px;
   background: url('../utils/Layer.png') no-repeat;
   background-size: 500px;
@@ -377,4 +384,18 @@
 .hyt-span{
   color: #009cff;
   cursor: pointer;
+}
+.hyt-message-input{
+  position: absolute;
+  left: 5%;
+  top: 30%;
+}
+footer{
+  background-color: #fff;
+  height: 100px; 
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(0,42%);
+  width: 100%;
 }
