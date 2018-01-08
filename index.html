@@ -11,6 +11,27 @@
   <title>Hyatt</title>
 </head>
 <body>
+    <div style="display:none"  id = "hyt-container-modal1" class="hyt-container-modal">
+        <div class="hyt-modal">
+            <form action="">
+                <label for="">Title</label>
+                <input type="text" name="" id="">
+                <label for="">Share In</label>
+                <input list="browsers" name="browser">
+                <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                </datalist>
+                <label for="">Add Comment (Optinal)</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <button class="btn-up">Upload</button>
+            <button class="btn-cancel" >Cancel</button>
+            </form>
+            <h2>Upload a File</h2><span onclick="hideModal()" id="icon-plus-icon1" class="icon-plus-icon"></span>
+              <h3>Attached File</h3>
+              <div></div>
+        </div>
+      </div>
   <div class="hyt-container">
     <div class="hyt-container-void">
     <div class="hyt-container-lateral">
@@ -32,10 +53,14 @@
         </div>     
       </div>
       <div class="hyt-container-groups">
+        <h3 style="display: none">Starred</h3>
+        <ul style="display: none">
+          <li class="hyt-firts-list">Housekeeping<p>2</p></li>
+        </ul>
         <h3>Groups<span class="icon-plus-icon"></span></h3>
         <ul>
           <li class="hyt-firts-list">Housekeeping<p>2</p></li>
-          <li>IT Issues<p>12</p></li>
+          <li class="hyt-firts-isues">IT Issues<p>12</p></li>
           <li>Leadership Commitee</li>
         </ul>
       </div>
@@ -54,11 +79,12 @@
       <div class="hyt-container-superior-text">
         <h4>Housekeeping</h4>
         <div class="hyt-text-align"> 
-          <span class="icon-53415"></span>
+          <span onclick="showIcon()" id="star1" class="icon-star-icon"></span>
+          <span onclick="showIcon()" id="star2" style ="display: none"class="icon-53415"></span> 
           <span class="icon-perfil-icon"></span>
           <span class="icon-engene-icon"></span>
           <span class="icon-perfil-plus-icon"></span>
-          <span class="hyt-invite">Invite others to this channel</span>  
+          <span id = "hyt-invite" class="hyt-invite">Invite others to this channel</span>  
         </div>
       </div>
       <div class="hyt-container-corner">
@@ -87,12 +113,20 @@
       <div class="hyt-container-image"></div>
     </div>
     <footer>
-      <div  class="hyt-message-input">
-        <span class="icon-upload-icon"></span><input  type="text" placeholder="Message Housekeeping..."><span class="icon-smiley-icon"></span>
+      <div class="hyt-message-input">
+        <span onclick="showModal()" id="icon-upload-icon1" class="icon-upload-icon"></span><input  type="text" placeholder="Message Housekeeping..."><span class="icon-smiley-icon"></span>
       </div>
     </footer>
   </div>
   </div>
 </div>
+<script>
+  function showModal(){
+    document.getElementById("hyt-container-modal1").style.display="block";
+  }
+  function hideModal(){
+    document.getElementById("hyt-container-modal1").style.visibility="hidden";
+  }
+</script>
 </body>
 </html>
