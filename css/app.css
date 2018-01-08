@@ -49,7 +49,7 @@
 }
 .profile-container{
   padding: 15px;
-  height: 95px;
+  height: 105px;
   border-bottom: 1px solid #333333;
   position: relative;
 }
@@ -108,7 +108,10 @@
 .hyt-container-groups > h3{
   border-bottom: 1px solid #333333;
   padding: 15px;
-  font-weight:  50;
+  padding-top: 24px;
+  font-weight:  100;
+  height: 25px;
+  font-size: 20px; 
 }
 .hyt-container-groups  li{
   height: 30px;
@@ -201,7 +204,10 @@
 .hyt-container-messages > h3{
   border-bottom: 1px solid #333333;
   padding: 15px;
+  padding-top: 24px;
   font-weight: 100;
+  height: 25px;
+  font-size: 20px;
 }
 .hyt-container-messages  li{
   height: 30px;
@@ -260,9 +266,12 @@
   display: block;
   background-image: url('../utils/baloon-icon.svg');
   background-repeat: space;
-  background-size: 30px;
-  background-position-x: 7px;
-  background-position-y: 5px;
+  background-size: 25px;
+  background-position-x: 9px;
+  background-position-y: 7px;
+}
+.hyt-container-corner{
+  margin-right: 22px;
 }
 .hyt-container-input-search {
   background-color: #fff;
@@ -274,12 +283,14 @@
   border-radius: 5px;
   margin-right: 20px; 
   margin-top: 10px; 
+
 }
 .hyt-container-input-search span{
   color: #a3a3a3;
   border-radius: 3px;
   background-color: #fff;
   padding-right: 5px; 
+  font-size: 13px;
 }
 .hyt-container-input-search input{
   border:none;
@@ -287,6 +298,7 @@
   width: 230px;
   outline: none;
   padding-left: 10px;
+  border-radius: 50%; 
 }
 .hyt-container-central{
   padding-left: 30px;
@@ -302,9 +314,8 @@
   color: #5f5f5f;
   padding-top: 10px; 
 }
-.hyt-container-central div:nth-child(1){
-  padding-top: 40px;
- 
+#hyt-perfil-1{
+  margin-top: 15px;
 }
 @media screen and (max-width: 1024px) {
   .hyt-container-central{
@@ -316,11 +327,11 @@
   color: #5f5f5f;
   padding-top: 30px;
   border-bottom: 1px solid #a09f9f;
-  width: 95%;
+  width: 97%;
   padding-bottom: 10px;  
 }
 .hyt-message-input input{
-  width: 85.6%;
+  width: 89.6%;
   height: 35px;
   border: 1px solid #666666;
   border-right: none;
@@ -410,16 +421,15 @@
   cursor: pointer;
 }
 .hyt-message-input{
-  position: absolute;
-  left: 5%;
-  top: 30%;
+    padding-left: 3%;
+    padding-top: 30px;
 }
 footer{
-  background-color: #fff;
+  background-color:#fff;
   height: 100px; 
   position: absolute;
-  left: 0;
   bottom: 0;
+  left: 0;
   transform: translate(0,42%);
   width: 100%;
 }
