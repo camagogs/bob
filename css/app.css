@@ -322,7 +322,7 @@
   padding-top: 50px;   
   height: 500px;
   overflow: scroll;
-  width: 1064px;  
+  width: calc(100% - 35px);  
 }
 .hyt-container-central::-webkit-scrollbar-track{
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -546,6 +546,12 @@
   margin-top: 15px;
   float: right;
 }
+.hyt-container-modal-photo{
+  background-color: #666;
+  width: 230px;
+  margin-top: 19px;
+  height: 175px;
+}
 footer{
   background-color:#fff;
   height: 100px; 
@@ -553,5 +559,5 @@ footer{
   bottom: 0;
   left: 0;
   transform: translate(0,42%);
-  width: 100%;
+  width:101.1%;
 }

@@ -7,11 +7,9 @@
   <link rel="stylesheet" href="./css/app.css">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./utils/bob/style.css">
-  <!-- <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular/angular-messages.js"></script>
-  <script src="js/app.js"></script> -->
   <title>Hyatt</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-animate.js"></script>
 </head>
 <body >
     <div ng-show="showMe"  id = "hyt-container-modal1" class="hyt-container-modal">
@@ -30,14 +28,14 @@
                 <button class="btn-up">Upload</button>
             <button class="btn-cancel" >Cancel</button>
             </form>
-            <h2>Upload a File</h2><span ng-click="myFunc()" id="icon-plus-icon1" class="icon-plus-icon"></span>
+            <h2>Upload a File</h2><span ng-click="myFunc()" onclick="hideModal()" id="icon-plus-icon1" class="icon-plus-icon"></span>
               <h3>Attached File</h3>
-              <div></div>
+              <div class="hyt-container-modal-photo"></div>
         </div>
       </div>
   <div class="hyt-container">
     <div class="hyt-container-void">
-    <div class="hyt-container-lateral">
+    <div id="hyt-container-lateral1" class="hyt-container-lateral">
       <div class="profile-container">
         <span class="icon-bell-icon"></span>
         <div class="hyt-photo"></div>
@@ -56,13 +54,13 @@
         </div>     
       </div>
       <div class="hyt-container-groups">
-        <h3 id="hyt-starred-1" style="display: none">Starred</h3>
-        <ul id="hyt-starred-2" style="display: none">
+        <h3 ng-show="showMe2" id="hyt-starred-1" s>Starred</h3>
+        <ul ng-show="showMe2" id="hyt-starred-2" >
           <li class="hyt-firts-list">Housekeeping<p>2</p></li>
         </ul>
         <h3>Groups<span class="icon-plus-icon"></span></h3>
         <ul>
-          <li id="hyt-starred-3" class="hyt-firts-list">Housekeeping<p>2</p></li>
+          <li ng-show="!showMe2"  id="hyt-starred-3" class="hyt-firts-list">Housekeeping<p>2</p></li>
           <li class="hyt-firts-isues">IT Issues<p>12</p></li>
           <li>Leadership Commitee</li>
         </ul>
@@ -82,7 +80,7 @@
       <div class="hyt-container-superior-text">
         <h4>Housekeeping</h4>
         <div class="hyt-text-align"> 
-          <span onclick="myFunction()" id="star1"  class="icon-53415"></span> 
+          <span onclick="myFunction()" ng-click="myFunc2()" id="star1"  class="icon-53415"></span> 
           <span class="icon-perfil-icon"></span>
           <span class="icon-engene-icon"></span>
           <span class="icon-perfil-plus-icon"></span>
@@ -116,7 +114,7 @@
     </div>
     <footer>
       <div class="hyt-message-input">
-        <span ng-click="myFunc()" id="icon-upload-icon1" class="icon-upload-icon"></span><input  type="text" placeholder="Message Housekeeping..."><span class="icon-smiley-icon"></span>
+        <span ng-click="myFunc()" onclick="showModal()" id="icon-upload-icon1" class="icon-upload-icon"></span><input  type="text" placeholder="Message Housekeeping..."><span class="icon-smiley-icon"></span>
       </div>
     </footer>
   </div>
@@ -126,31 +124,35 @@
   var app = angular.module('hytt', []);
   app.controller('myCtrl', function($scope) {
       $scope.showMe = false;
+      $scope.showMe2 = false;
       $scope.myFunc = function() {
         $scope.showMe = !$scope.showMe;
       }
+      $scope.myFunc2 = function(){
+      $scope.showMe2 = !$scope.showMe2;
+    }
   });
-  // function showModal(){
-  //   document.getElementById("hyt-container-modal1").style.display="block";
-  //   document.getElementById("icon-upload-icon1").style.backgroundColor="#00a58b";
-  //   document.getElementById("icon-upload-icon1").style.color="#fff";
-  // }
-  // function hideModal(){
-  //   document.getElementById("hyt-container-modal1").style.display="none";
-  //   document.getElementById("icon-upload-icon1").style.backgroundColor="#fff";
-  //   document.getElementById("icon-upload-icon1").style.color="#a09f9f";
-  // }
+  function showModal(){
+    document.getElementById("icon-upload-icon1").style.backgroundColor="#00a58b";
+    document.getElementById("icon-upload-icon1").style.color="#fff";
+  }
+  function hideModal(){
+    document.getElementById("icon-upload-icon1").style.backgroundColor="#fff";
+    document.getElementById("icon-upload-icon1").style.color="#a09f9f";
+  }
   function myFunction() {
     var element = document.getElementById("star1");
-    document.getElementById("hyt-starred-1").style.display = "show";
-    // document.getElementById("hyt-starred-2").style.display = "show";
+    var element2 = document.getElementById("hyt-container-lateral1");
+    console.log(element2); 
     if(element.className=="icon-star-icon"){
       element.classList.add("icon-53415");
       element.classList.remove("icon-star-icon");
+      element2.style.height = "450px";
     }
     else{
       element.classList.remove("icon-53415");
       element.classList.add("icon-star-icon");
+      element2.style.height = "517px";
     }
 }
 </script>
