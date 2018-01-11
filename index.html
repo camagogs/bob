@@ -10,6 +10,7 @@
   <title>Hyatt</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-animate.js"></script>
+  <script src="./js/app.js"></script>
 </head>
 <body >
     <div ng-show="showMe"  id = "hyt-container-modal1" class="hyt-container-modal">
@@ -120,41 +121,5 @@
   </div>
   </div>
 </div>
-<script>
-  var app = angular.module('hytt', []);
-  app.controller('myCtrl', function($scope) {
-      $scope.showMe = false;
-      $scope.showMe2 = false;
-      $scope.myFunc = function() {
-        $scope.showMe = !$scope.showMe;
-      }
-      $scope.myFunc2 = function(){
-      $scope.showMe2 = !$scope.showMe2;
-    }
-  });
-  function showModal(){
-    document.getElementById("icon-upload-icon1").style.backgroundColor="#00a58b";
-    document.getElementById("icon-upload-icon1").style.color="#fff";
-  }
-  function hideModal(){
-    document.getElementById("icon-upload-icon1").style.backgroundColor="#fff";
-    document.getElementById("icon-upload-icon1").style.color="#a09f9f";
-  }
-  function myFunction() {
-    var element = document.getElementById("star1");
-    var element2 = document.getElementById("hyt-container-lateral1");
-    console.log(element2); 
-    if(element.className=="icon-star-icon"){
-      element.classList.add("icon-53415");
-      element.classList.remove("icon-star-icon");
-      element2.style.height = "450px";
-    }
-    else{
-      element.classList.remove("icon-53415");
-      element.classList.add("icon-star-icon");
-      element2.style.height = "517px";
-    }
-}
-</script>
 </body>
 </html>
