@@ -132,7 +132,7 @@
   font-weight: 700!important;
 }
 .hyt-firts-list::before{
-  content: '------------';
+  content: '-----------';
   font-size: 2px;
   background-color: #05b44f;
   color: #05b44f;
@@ -148,7 +148,7 @@
   position: relative;
 }
 #hyt-firts-list-1::before, #hyt-firts-list-3::before{
-  content: '------------';
+  content: '-----------';
   font-size: 2px;
   background-color: #05b44f;
   color: #05b44f;
@@ -161,7 +161,7 @@
   left: 25px;
 }
 #hyt-firts-list-2::before {
-  content: '--------';
+  content: '-------';
   font-size: 2px;
   background-color: #05b44e00;
   color: #05b44e00;
